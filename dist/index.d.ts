@@ -1,9 +1,10 @@
 import { SessionResponse } from '../src/schemas/session';
 type NexformOptions = {
     apiKey: string;
+    webhookSecret?: string;
 };
 type CreateSessionOptions = {
-    formType: string;
+    formType: 'w9' | 'w8ben' | 'w8bene';
     reference?: string;
     successUrl?: string;
     signerEmail?: string;
@@ -15,7 +16,12 @@ type CreateSessionOptions = {
 };
 export declare class Nextform {
     readonly apiKey: string;
-    constructor({ apiKey }: NexformOptions);
+    readonly webhookSecret: string;
+    constructor({ apiKey, webhookSecret }: NexformOptions);
     createSession({ formType, reference, successUrl, signerEmail, customization, brandId, expiresAt, expirationMessage, formData, }: CreateSessionOptions): Promise<SessionResponse>;
+    verifyWebhook({ body, signature }: {
+        body: string | object;
+        signature: string;
+    }): boolean;
 }
 export {};
