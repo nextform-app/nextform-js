@@ -1,6 +1,6 @@
 {
   "name": "@balancer-team/nextform",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Nextform JavaScript Client and Utilities",
   "main": "dist/index.js",
   "scripts": {
