@@ -1,4 +1,4 @@
-# JavaScript Client for W-9, W-8BEN, and W-8BEN-E
+# JavaScript Library for W-9 and W-8BEN
 
 This JavaScript library helps you collect, generate, and keep track of commonly requested IRS forms such as W-9, W-8BEN, and W-8BEN-E using the Nextform API.
 
@@ -10,12 +10,15 @@ npm i @balancer-team/nextform
 
 ### Usage
 
-Provide your API key and optional webhook secret to the `Nextform` constructor. You can obtain an API key by signing up at [nextform.app](https://nextform.app/).
+Provide your API key and optional webhook secret to the `Nextform` constructor. You can obtain a free API key by signing up at [nextform.app](https://nextform.app/).
 
 ```ts
 import { Nextform } from '@balancer-team/nextform'
 
-const nextform = new Nextform({ apiKey: 'YOUR_API_KEY', webhookSecret: 'YOUR_WEBHOOK_SECRET' })
+const nextform = new Nextform({
+  apiKey: 'YOUR_API_KEY',
+  webhookSecret: 'YOUR_WEBHOOK_SECRET',
+})
 ```
 
 Set up a session by calling `createSession` with the desired form type. The form type can be one of the following:
@@ -54,7 +57,7 @@ router.post('/webhook', async (req, res) => {
   const body = JSON.stringify(req.body) // Assumes you are using express.json() middleware
 
   // Verify the webhook signature
-  const isVerified = nextform.verifyWebhook({ signature: signature, body: body })
+  const isVerified = nextform.verifyWebhook({ signature: signature, body: body }) // true or false
   if (!isVerified) return res.status(401).send('Invalid signature.')
 
   // Add your code to handle the data from the webhook
