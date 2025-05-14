@@ -1,6 +1,6 @@
-# W-9 and W-8BEN JavaScript Client
+# JavaScript Client to Collect W-9, W-8BEN, and W-8BEN-E Forms
 
-This JavaScript library helps you collect, generate, and keep track of commonly requested forms like form W-9, W-8BEN, and W-8BEN-E using the Nextform API.
+This JavaScript library helps you collect, generate, and keep track of commonly requested IRS forms such as W-9, W-8BEN, and W-8BEN-E using the Nextform API.
 
 ### Install
 
@@ -58,5 +58,7 @@ router.post('/webhook', async (req, res) => {
   if (!isVerified) return res.status(401).send('Invalid signature.')
 
   // Add your code to handle the data from the webhook
+  const data = req.body
+  // ...
 })
 ```
