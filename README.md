@@ -1,4 +1,4 @@
-# JavaScript Client to Collect W-9, W-8BEN, and W-8BEN-E Forms
+# JavaScript Client for W-9, W-8BEN, and W-8BEN-E
 
 This JavaScript library helps you collect, generate, and keep track of commonly requested IRS forms such as W-9, W-8BEN, and W-8BEN-E using the Nextform API.
 
