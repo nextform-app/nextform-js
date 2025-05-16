@@ -36,10 +36,10 @@ const session = await nextform.createSession({
 //
 // {
 //   id: 'oymuG8Hz2NJJVrEvYNM5e',
-//   formType: 'w9Mar2024',
+//   formType: 'w9',
 //   reference: '',
 //   status: 'open',
-//   url: 'https://nextform.app/form/w9Mar2024/oymuG8Hz2NJJVrEvYNM5e',
+//   url: 'https://nextform.app/form/w9/oymuG8Hz2NJJVrEvYNM5e',
 //   ...
 // }
 ```
