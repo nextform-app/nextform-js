@@ -1,5 +1,5 @@
 {
-  "name": "@balancer-team/nextform",
+  "name": "@nextform/nextform",
   "version": "0.0.5",
   "description": "Nextform JavaScript Client and Utilities",
   "main": "dist/index.js",
@@ -9,7 +9,10 @@
   },
   "author": "Alan Hettinger",
   "license": "MIT",
-  "repository": "github:balancer-team/nextform-js",
+  "repository": "github:nextform/nextform-js",
+  "publishConfig": {
+    "access": "public"
+  },
   "homepage": "https://nextform.app",
   "keywords": [
     "tax form",

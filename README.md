@@ -5,7 +5,7 @@ This JavaScript library helps you collect, generate, and keep track of commonly 
 ### Install
 
 ```bash
-npm i @balancer-team/nextform
+npm i @nextform/nextform
 ```
 
 ### Usage
@@ -13,7 +13,7 @@ npm i @balancer-team/nextform
 Provide your API key and optional webhook secret to the `Nextform` constructor. You can obtain a free API key by signing up at [nextform.app](https://nextform.app/).
 
 ```ts
-import { Nextform } from '@balancer-team/nextform'
+import { Nextform } from '@nextform/nextform'
 
 const nextform = new Nextform({
   apiKey: 'YOUR_API_KEY',
